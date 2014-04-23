@@ -1,0 +1,20 @@
+build:
+  target: docroot
+  build_file: build.make
+  options:
+    - ''
+subtrees:
+  rhymesdistro:
+    path: docroot/profiles/rhymesdistro
+    uri: 'https://github.com/DrupalLadder/rhymesdistro.git'
+    branch: master
+    message: 'rhymesdistro subtree from https://github.com/DrupalLadder/rhymesdistro.git'
+  rhymes:
+    path: docroot/sites/all/modules/rhymesdistro/rhymes
+    uri: 'https://github.com/DrupalLadder/rhymes.git'
+    branch: master
+    message: 'rhymes subtree from https://github.com/DrupalLadder/rhymes.git'
+postbuild-commands:
+  - 'rm -rf docroot/.htaccess; cd docroot; ln -s ../assets/.htaccess .htaccess;'
+  - 'rm -rf docroot/robots.txt; cd docroot; ln -s ../assets/robots.txt robots.txt;'
+  - 'rm -rf docroot/sites/default; cd docroot/sites; ln -s ../../assets/sites/default default;'
