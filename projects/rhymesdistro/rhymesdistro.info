@@ -1,0 +1,30 @@
+name = Rhymes Distro
+description = An example distro for demostrating Git, GitHub, Build Manager, and Drush Subtree workflows.
+version = VERSION
+core = 7.x
+
+; Core modules.
+dependencies[] = block
+dependencies[] = color
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = toolbar
+dependencies[] = overlay
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = rdf
+
+; Contrib modules.
+dependencies[] = rhymes
