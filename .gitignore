@@ -1,5 +1,15 @@
 # Ignore paths that contain user-generated content.
-docroot/files
 docroot/sites/*/files
 docroot/sites/*/private
 
+# Ignore local configuration files.
+#
+# Note: This does NOT ignore settings.php. That's not an oversight, it's
+# intentional. Settings.php does not include sensitive credentials. It delegates
+# that to include files which are not included in this repository.
+#
+assets/sites/*/settings.local.php
+
+# Ignore vim stuff.
+*.swp
+*.swo

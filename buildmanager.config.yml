@@ -16,4 +16,6 @@ subtrees:
     message: 'rhymes subtree from https://github.com/DrupalLadder/rhymes.git'
 postbuild-commands:
   # Restore symlinks to assets.
-  - 'git checkout docroot/sites'
+  - 'git checkout docroot/sites/default'
+  # Remove stuff we don't want.
+  - 'rm docroot/.gitignore'
