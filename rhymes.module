@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * @file
+ * Rhymes module.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function rhymes_menu() {
+  $items = array();
+
+  $items['rhymes'] = array(
+    'page callback' => 'rhymes_view',
+    'access callback' => TRUE,
+  );
+  $items['rhymes/%'] = array(
+    'page callback' => 'rhymes_rhyme_view',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+/**
+ * Page callback for /rhymes.
+ */
+function rhymes_view() {
+  $variables = array(
+    'items' => array(),
+    'title' => t('Rhymes'),
+    'type' => 'ul',
+  );
+  foreach (rhymes_get_rhymes() as $name => $filepath) {
+    $variables['items'][]['data'] = l($name, "rhymes/$name");
+  }
+  return theme('item_list', $variables);
+}
+
+/**
+ * Page callback for rhymes/%.
+ */
+function rhymes_rhyme_view($name) {
+  $rhymes = rhymes_get_rhymes();
+
+  // Error handling.
+  if (!isset($rhymes[$name])) {
+    drupal_set_message(t('Sorry. No rhyme by this name is available: !name',
+      array('!name' => $name)), 'warning');
+    return;
+  }
+
+  // Get rhyme. Format plain text.
+  $contents = file_get_contents($rhymes[$name]);
+  $contents = check_plain($contents);
+  $output = check_markup($contents, 'plain_text');
+
+  return $output;
+}
+
+/**
+ * Returns array of file paths from rhymes directory keyed by name.
+ *
+ * @return array
+ *   Rhyme files keyed by file name.
+ */
+function rhymes_get_rhymes() {
+  $rhymes = array();
+  $directory = drupal_get_path('module', 'rhymes') . '/rhymes';
+  foreach (file_scan_directory($directory, '/.*/') as $file) {
+    $rhymes[$file->name] = "$directory/{$file->filename}";
+  }
+  return $rhymes;
+}

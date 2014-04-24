@@ -1,0 +1,3 @@
+name = Rhymes
+description = Add rhymes to the rhymes directory to make new rhymes pages available to site (an example module for git workflow demos and training)
+core = 7.x
