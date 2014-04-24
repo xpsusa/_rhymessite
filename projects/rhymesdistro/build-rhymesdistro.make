@@ -7,7 +7,7 @@ api = 2
 projects[drupal][version] = 7.25
 
 projects[rhymesdistro][type] = profile
-projects[rhymesdistro][tag] = 7.x-1.0-alpha1
 projects[rhymesdistro][download][type] = git
-projects[rhymesdistro][download] =  https://github.com/DrupalLadder/rhymesdistro.git
+projects[rhymesdistro][download][url] =  https://github.com/DrupalLadder/rhymesdistro.git
+projects[rhymesdistro][tag] = 7.x-1.0-alpha1
 ; projects[rhymesdistro][version] = 1.0

@@ -1,3 +1,6 @@
+api = 2
+core = 7.x
+
 ; Contrib
 ; -------
 projects[rhymes][type] = module
