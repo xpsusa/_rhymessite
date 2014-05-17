@@ -7,7 +7,7 @@ includes[contrib] = projects/rhymesdistro/drupal-org.make
 ; ----------------------------------------------------------------------------
 
 ; Set default subdirectory for modules included by distro as rhymesdistro.
-projects[default][subdir] = rhymesdistro
+defaults[projects][subdir] = rhymesdistro
 
 ; Do not apply default above to rhymesdistro profile.
 projects[rhymesdistro][subdir] = ''
