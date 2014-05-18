@@ -6,9 +6,15 @@ docroot/sites/*/private
 #
 # Note: This does NOT ignore settings.php. That's not an oversight, it's
 # intentional. Settings.php does not include sensitive credentials. It delegates
-# that to include files which are not included in this repository.
-#
+# that to include files which are not included in this repository. (Private
+# credentials are provided by the hosting provider, or local config ignored
+# below.)
 assets/sites/*/settings.local.php
+
+# Alternate buildmanager file for local development, pointing to repos stored
+# locally (for easy, fast building and rebuilding without an Internet
+# connection).
+buildmanager.local.yml
 
 # Ignore vim stuff.
 *.swp
