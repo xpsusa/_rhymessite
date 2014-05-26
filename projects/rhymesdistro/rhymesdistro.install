@@ -23,19 +23,32 @@ function rhymesdistro_install() {
     'link_title' => st('Rhymes'),
     'link_path' => 'rhymes',
     'menu_name' => 'main-menu',
+    'weight' => 0,
   );
   // Rhyme Videos points to /rhyme-videos provided by rhymevideo feature module
   // included with rhymesdistro.
   $items[] = array(
-    'link_title' => st('Rhyme Videos'),
+    'link_title' => st('On YouTube'),
     'link_path' => 'rhyme-videos',
     'menu_name' => 'main-menu',
+    'weight' => 1,
   );
 
   // Create menu links.
   foreach ($items as $item) {
     menu_link_save($item);
   }
+
+  // Save page node with info about site.
+  $node = new stdClass();
+  $node->title = st('Home: About Rhymes Site / Rhymes Distro');
+  $node->type = 'page';
+  $node->body['und'][0]['value'] = rhymesdistro_get_about_content();
+  $node->body['und'][0]['format'] = 'filtered_html';
+  node_save($node);
+
+  // Set /rhymes to front page.
+  variable_set('site_frontpage', 'node/1');
 
   // Install rhymevideo so we can save some example content in the content type it provides.
   module_enable(array('rhymevideo'));
@@ -91,4 +104,22 @@ function rhymesdistro_get_demo_videos() {
   );
 
   return $videos;
+}
+
+/**
+ * @return string
+ *   HTML for page node. About page with info about site/distro.
+ */
+function rhymesdistro_get_about_content() {
+$html = <<<EOF
+@todo Add info about these.
+
+https://github.com/drupalladder/_rhymessite
+https://github.com/drupalladder/rhymes
+https://github.com/drupalladder/rhymesdistro
+https://github.com/whitehouse/drushsubtree
+https://github.com/whitehouse/buildmanager
+EOF;
+
+  return $html;
 }
