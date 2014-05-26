@@ -31,6 +31,8 @@ defaults[projects][subdir] = contrib
 
 projects[ctools][version] = 1.3
 
+projects[features][version] = 2.0
+
 projects[views][version] = 3.7
 
 projects[youtube][version] = 1.1

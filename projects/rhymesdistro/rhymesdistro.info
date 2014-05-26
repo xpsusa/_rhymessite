@@ -28,6 +28,8 @@ dependencies[] = rdf
 
 ; Contrib modules.
 dependencies[] = rhymes
+dependencies[] = rhymevideo
 dependencies[] = ctools
+dependencies[] = features
 dependencies[] = views
 dependencies[] = youtube
