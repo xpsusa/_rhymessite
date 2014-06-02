@@ -221,7 +221,7 @@ function rhymesdistro_install() {
 
   // Save page node with info about site.
   $node = new stdClass();
-  $node->title = st('Home: About Rhymes Site / Rhymes Distro');
+  $node->title = st('About');
   $node->type = 'page';
   $node->body['und'][0]['value'] = rhymesdistro_get_about_content();
   $node->body['und'][0]['format'] = 'filtered_html';
@@ -314,12 +314,22 @@ function rhymesdistro_get_demo_videos() {
  *   HTML for page node. About page with info about site/distro.
  */
 function rhymesdistro_get_about_content() {
-$html = <<<EOF
-@todo Add info about these.
 
+$html = <<<EOF
+This is a demo site for demonstrating Git workflows.
+
+GitBook with tutorials:
+https://github.com/drupalladder/gitworkflow
+
+Example site code base for basic site setup and site developer tutorials:
 https://github.com/drupalladder/_rhymessite
+
+Example code for advanced tutorials on maintaining contrib projects developed
+inside site repos and working with Build Manager and Drush Subtree:
 https://github.com/drupalladder/rhymes
 https://github.com/drupalladder/rhymesdistro
+
+Related Drush Extensions for advanced tutorials:
 https://github.com/whitehouse/drushsubtree
 https://github.com/whitehouse/buildmanager
 EOF;
