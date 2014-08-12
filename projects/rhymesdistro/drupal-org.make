@@ -35,4 +35,4 @@ projects[youtube][version] = 1.1
 projects[rhymes][type] = module
 projects[rhymes][download][type] = git 
 projects[rhymes][download][url] = http://git.drupal.org/project/rhymes.git
-projects[rhymes][tag] = 7.x-1.4
+projects[rhymes][tag] = 7.x-1.5
