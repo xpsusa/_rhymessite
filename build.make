@@ -5,9 +5,4 @@ includes[contrib] = projects/rhymesdistro/drupal-org.make
 
 ; Below here, override anything included above and add any site-specific info.
 ; ----------------------------------------------------------------------------
-
-; Set default subdirectory for modules included by distro as rhymesdistro.
-defaults[projects][subdir] = rhymesdistro
-
-; Do not apply default above to rhymesdistro profile.
-projects[rhymesdistro][subdir] = ''
+includes[custom] = projects/com_rhymessite_www/com_rhymessite_www.make
