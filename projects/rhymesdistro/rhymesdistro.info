@@ -1,5 +1,5 @@
 name = Rhymes Distro
-description = An example distro for demostrating Git, GitHub, Build Manager, and Drush Subtree workflows.
+description = An example distro for demonstrating GitHub workflows for Drupal development.
 version = VERSION
 core = 7.x
 
@@ -28,8 +28,10 @@ dependencies[] = rdf
 
 ; Contrib modules.
 dependencies[] = rhymes
-dependencies[] = rhymevideo
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = views
 dependencies[] = youtube
+
+; Custom modules
+dependencies[] = rhymevideo
