@@ -19,3 +19,6 @@ buildmanager.local.yml
 # Ignore vim stuff.
 *.swp
 *.swo
+
+# Ignore PHPStorm stuff
+.idea/*
