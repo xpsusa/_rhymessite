@@ -2,4 +2,5 @@ name = www.rhymessite.com
 description = Maintains site-specific dependencies and config for www.rhymessite.com
 core = 7.x
 
-dependencies[] = acquia_connector
+dependencies[] = acquia_agent
+dependencies[] = acquia_spi

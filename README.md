@@ -1,7 +1,8 @@
 RhymesSite
 ==========
 
-This is an example of a Drupal site repository for demos and training on Git, GitHub, Build Manager and Drush Subtree workflows.
+This is an example of a Drupal site repository for demos and training on Git,
+GitHub, and Git Subtree workflows.
 
 Example of an instance of a rhymes site. This site is:
 
