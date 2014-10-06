@@ -1,6 +1,5 @@
 ; Include rhymesdistro's make files as base for this build.
 ; ---------------------------------------------------------
-includes[core] = projects/rhymesdistro/drupal-org-core.make
 includes[base] = projects/rhymesdistro/build-rhymesdistro.make
 includes[contrib] = projects/rhymesdistro/drupal-org.make
 
