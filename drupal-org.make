@@ -4,7 +4,7 @@ core = 7.x
 ; Contrib
 ; -------
 
-; When you clone _rhymessite from https://github.com/drupalladder/_rhymessite,
+; When you clone RhymesSite from https://github.com/drupalladder/RhymesSite,
 ; rhymes module lives here:
 ;   sites/all/modules/rhymesdistro/rhymes
 ;
@@ -23,6 +23,14 @@ core = 7.x
 ;
 ; Support for contrib_destination was committed to Drush 7.x here:
 ;   https://github.com/drush-ops/drush/pull/582
+;
+; Patches to backport contrib_destination to Drush 6.x and 5.x are here:
+;  - 5.x, https://github.com/drush-ops/drush/issues/836
+;  - 6.x, https://github.com/drush-ops/drush/issues/834
+;
+; Working forks of Drush with the patch applied can be downloaded here:
+;  - 5.x, https://github.com/bryanhirsch/drush/tree/5.x
+;  - 6.x, https://github.com/bryanhirsch/drush/tree/6.x
 ;
 defaults[projects][subdir] = rhymesdistro
 defaults[projects][contrib_destination] = sites/all
