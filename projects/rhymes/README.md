@@ -8,4 +8,4 @@ Add this module to any Drupal 7 code base and enable. Then...
 
  - See a list of available rhymes pages here: example.com/rhymes
  - See a particular rhyme here: example.com/rhymes/<my-rhyme>
- - Add new rhymes to the included rhymes directory to make new rhymes pages
+ - Add new rhymes by adding text files to the rhymefiles directory

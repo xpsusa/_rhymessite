@@ -68,7 +68,7 @@ function rhymes_rhyme_view($name) {
  */
 function rhymes_get_rhymes() {
   $rhymes = array();
-  $directory = drupal_get_path('module', 'rhymes') . '/rhymes';
+  $directory = drupal_get_path('module', 'rhymes') . '/rhymesfiles';
   foreach (file_scan_directory($directory, '/.*/') as $file) {
     $rhymes[$file->name] = "$directory/{$file->filename}";
   }
